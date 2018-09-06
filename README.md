@@ -32,3 +32,33 @@ set jsonFileDir=C:\ElevenWorkSpace\apiJson\
 java -jar CodeBuilder.jar %ns% %savePath% %jsonFileDir%
 pause
 ```
+`json template`: 
+```json
+WebApi模板
+{
+  "apiPath": "api/v1/user/1/Sys/Login/{sUserID}/{sPassword}",
+  "controller": "user",
+  "method": "get",
+  "req":{
+       "Datekey": "Date",
+      "StringKey": "",
+      "ClassKey": "org.google.JsonObject",
+      "intKey": 1,
+      "doubleKey": 1.1,
+      "BooleanKey": true
+  },
+  "res": {
+    "Content": {
+      "Datekey": "Date",
+      "StringKey": "",
+      "ClassKey": "org.google.JsonObject",
+      "intKey": 1,
+      "doubleKey": 1.1,
+      "BooleanKey": true
+    },
+    "StatusCode": 1,
+    "State": 1,
+    "Message": ""
+  }
+}
+```
