@@ -1,0 +1,23 @@
+{
+  "apiPath": "api/Workflow/DefineApp",
+  "controller": "wfWebApi",
+  "method": "post",
+  "req": {
+    "Value": ""
+  },
+  "res": {
+    "Content": {
+      "DefaultName": "",
+      "ServiceType": {
+        "WebAPI": 1,
+        "WebService": 1,
+        "Remoting": 1
+      },
+      "BusiAppCode": "",
+      "ClientWebServiceUrl": "",
+      "BusiObjectClassName": ""
+    },
+    "State": 0,
+    "Message": ""
+  }
+}

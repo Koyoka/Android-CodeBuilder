@@ -1,0 +1,11 @@
+{
+  "apiPath": "api/Workflow/DeleteByBusiId/{busiId}",
+  "controller": "wfWebApi",
+  "method": "get",
+  "req": null,
+  "res": {
+    "Content": 0,
+    "State": 0,
+    "Message": ""
+  }
+}

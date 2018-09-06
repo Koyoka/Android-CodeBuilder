@@ -1,0 +1,27 @@
+{
+  "apiPath": "api/Workflow/ListAviableSteps/{appId}/{userId}/{companyId}",
+  "controller": "wfWebApi",
+  "method": "get",
+  "req": null,
+  "res": {
+    "Content": [
+      {
+        "WorkFlowName": "",
+        "EntryName": "",
+        "BusinessId": "",
+        "Width": 1,
+        "Height": 1,
+        "StepIndex": 1,
+        "StepName": "",
+        "StartTime": "Date",
+        "Owners": [""],
+        "EntryId": "",
+        "StepId": "",
+        "Url": "",
+        "OwnerModel": 1
+      }
+    ],
+    "State": 0,
+    "Message": ""
+  }
+}

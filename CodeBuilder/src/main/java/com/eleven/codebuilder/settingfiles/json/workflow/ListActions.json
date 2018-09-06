@@ -1,0 +1,19 @@
+{
+  "apiPath": "api/Workflow/ListActions/{entryId}/{stepIndex}/{userId}",
+  "controller": "wfWebApi",
+  "method": "get",
+  "req": null,
+  "res": {
+    "Content": [
+      {
+        "ActionDefineName": "",
+        "ActionIndex": 1,
+        "DisplayIndex": 1,
+        "ActionName": "",
+        "IconClass": 0
+      }
+    ],
+    "State": 0,
+    "Message": ""
+  }
+}

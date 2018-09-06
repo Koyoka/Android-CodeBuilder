@@ -1,0 +1,45 @@
+package $clsStruct.nameSpace;
+
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
+import com.eleven.httpvolleypromiser.proxy.base.BaseHttpGetModelDto;
+
+public class $clsStruct.getUpFirstClassName() extends BaseHttpGetModelDto{
+
+#foreach ($item in $clsStruct.getFieldList())
+    private $item.getScriptType() $item.getFieldName();
+#end
+
+#foreach ($item in $clsStruct.getFieldList())
+    public void set$item.getUpFirstFieldName()($item.getScriptType() $item.getLowFirstFieldName()){
+        this.$item.getFieldName() = $item.getLowFirstFieldName();
+    }
+    public $item.getScriptType() get$item.getUpFirstFieldName()(){
+        return this.$item.getFieldName();
+    }
+
+#end
+
+    @Override
+    public Map<String, String> getFieldMap() {
+        Map<String, String> map = new HashMap<String, String>();
+
+#foreach ($item in $clsStruct.getFieldList())
+        map.put("$item.getFieldName()", safeGetHttpData(this.$item.getFieldName()));
+#end
+        return map;
+    }
+
+    @Override
+    public String getQueryStr(String url){
+        String qStr = url
+#foreach ($item in $clsStruct.getFieldList())
+            .replaceFirst("$item.getFieldName()", this.$item.getFieldName() == null ? "" : this.$item.getFieldName())
+#end
+        ;
+        return qStr;
+    }
+
+}

@@ -1,0 +1,11 @@
+{
+  "apiPath": "api/Workflow/GetBusiObjectEntryId/{busiObjectId}",
+  "controller": "wfWebApi",
+  "method": "post",
+  "req": null,
+  "res": {
+    "Content": "",
+    "State": 0,
+    "Message": ""
+  }
+}

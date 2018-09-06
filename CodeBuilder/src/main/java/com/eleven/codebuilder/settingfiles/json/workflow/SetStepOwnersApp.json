@@ -1,0 +1,15 @@
+{
+  "apiPath": "api/Workflow/SetStepOwnersApp/{stepId}",
+  "controller": "wfWebApi",
+  "method": "post",
+  "req": {
+    "Ids": [
+      ""
+    ]
+  },
+  "res": {
+    "Content": "",
+    "State": 0,
+    "Message": ""
+  }
+}

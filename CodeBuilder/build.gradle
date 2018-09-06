@@ -1,0 +1,47 @@
+apply plugin: 'java-library'
+//def vCode = 2
+def vName = "1.0.0"
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile 'com.google.code.gson:gson:2.2.4'
+    compile 'org.json:json:20140107'
+    compile 'org.xerial:sqlite-jdbc:3.8.11.2'
+    compile 'org.apache.velocity:velocity:1.7'
+}
+
+def sdkDestinationPath = "build/jar/";
+def zipFile = file('build/libs/CodeBuilder.jar')
+task makeJar(type: Jar,dependsOn: build) {
+    from zipTree(zipFile)
+    from fileTree(dir: 'src/main',includes: ['assets/**'], excludes: [''])//将assets目录打入jar包
+//    baseName = 'codeBuilderJar'
+    destinationDir = file(sdkDestinationPath)
+}
+jar {
+    manifest {
+        attributes(
+                "Manifest-Version": 1.0,
+                "Main-Class": "com.eleven.codebuilder.MyClass",
+                "Class-Path": configurations.compile.collect { "lib/${it.name}" }.join(' '))
+    }
+    from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
+    from fileTree(dir: 'src/main',includes: ['assets/**'], excludes: [''])//将assets目录打入jar包
+    from fileTree(dir: 'src/main',includes: ['image/**'], excludes: [''])//将assets目录打入jar包
+//    from fileTree(dir: 'src/main',includes: ['assets/**'], excludes: [''])//将assets目录打入jar包
+//    into('assets') {
+//        from 'assets'
+//    }
+}
+
+apply plugin: 'com.novoda.bintray-release'
+publish {
+    repoName = 'ElevenPublicRepository'
+    userOrg = 'elevengroup'
+    groupId = 'com.eleven.devlib'
+    artifactId = 'CodeBuilder'
+    publishVersion = vName
+    desc = 'code build library for Android'
+    website = 'https://github.com/Koyoka'
+}
+sourceCompatibility = "1.7"
+targetCompatibility = "1.7"

@@ -1,0 +1,24 @@
+{
+  "apiPath": "api/Workflow/GetCurrentSteps/{entryID}",
+  "controller": "wfWebApi",
+  "method": "get",
+  "req": null,
+  "res": {
+    "Content": [
+      {
+        "StepIndex": 1,
+        "StepName": "",
+        "StartTime": "Date",
+        "Owners": [
+          ""
+        ],
+        "EntryId": "",
+        "StepId": "",
+        "Url": "",
+        "OwnerModel": 0
+      }
+    ],
+    "State": 0,
+    "Message": ""
+  }
+}

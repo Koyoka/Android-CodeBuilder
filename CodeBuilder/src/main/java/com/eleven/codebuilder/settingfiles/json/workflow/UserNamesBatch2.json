@@ -1,0 +1,17 @@
+{
+  "apiPath": "api/v1/sys/ac/user/names/batch2",
+  "controller": "wfWebApi",
+  "method": "post",
+  "req": {
+    "Ids": [
+      ""
+    ]
+  },
+  "res": {
+    "Content": [
+      ""
+    ],
+    "State": 0,
+    "Message": ""
+  }
+}

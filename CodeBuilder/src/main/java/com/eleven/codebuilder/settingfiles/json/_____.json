@@ -1,0 +1,43 @@
+{
+	"apiPath":"api/v1/user/1/Login/{sUserID}/{sPassword}/{sLoginClient}",
+	"controller":"user",
+	"method":"get",
+	"req":{
+		"ID": "",
+		"Content": "",
+		"Type": 0,
+		"AppVersion": "",
+		"SystemVersion": "",
+		"MachineVersion": "",
+		"CreateTime": "Date",
+		"CreateUser": "",
+		"Timestamp": 0
+	},
+	"res":{
+		"Content": {
+			"UserID": "",
+			"UserName": "",
+			"UserPicture": "",
+			"RefreshToken": "",
+			"AccessToken": "",
+			"ChannelID": "",
+			"RoleType": 0,
+			"UserData": "",
+			"CurrentAppID": "",
+			"CurrentAppUrl": "",
+			"State": 0,
+			"Message": "",
+			"Timestamp": 0,
+			"objArray":[{
+					"ID": "",
+					"Code": "",
+					"Name": "",
+					"ProjectID": "",
+					"Timestamp": 0
+				}]
+		},
+		"StatusCode": 0,
+		"State": 0,
+		"Message": ""
+	}
+}

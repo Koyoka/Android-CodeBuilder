@@ -1,0 +1,25 @@
+{
+  "apiPath": "api/Workflow/GetHistorySetps/{entryID}",
+  "controller": "wfWebApi",
+  "method": "get",
+  "req": null,
+  "res": {
+    "Content": [
+      {
+        "Id": "",
+        "CallerName": "",
+        "Caller": "",
+        "StepName": "",
+        "TreatTime": "",
+        "strTreatTime": "",
+        "ActionName": "",
+        "Optition": "",
+        "StartTime": "Date",
+        "FinishTime": "Date",
+        "State": ""
+      }
+    ],
+    "State": 0,
+    "Message": ""
+  }
+}

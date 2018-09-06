@@ -1,0 +1,226 @@
+package $proxyClass.getNameSpace();
+
+import java.util.ArrayList;
+
+import com.eleven.httpvolleypromiser.proxy.event.IHttpHelperListener;
+import com.eleven.httpvolleypromiser.proxy.event.IOnProxyDoneForStringListener;
+import com.eleven.httpvolleypromiser.proxy.event.IOnProxyDoneListener;
+import com.eleven.jpromiser.core.Promiser;
+import com.eleven.httpvolleypromiser.proxy.ProviderContext;
+import com.eleven.httpvolleypromiser.proxy.base.BaseProxy;
+import com.eleven.httpvolleypromiser.IProxyDataProvider;
+
+
+
+public class $proxyClass.getClassName() extends BaseProxy {
+
+    private String apiUrl = "$proxyClass.getApiUrl()";
+    private String method = "$proxyClass.getMethod()";
+
+    public $proxyClass.getClassName()(){
+        initProxy();
+    }
+
+    public $proxyClass.getClassName()(ProviderContext pContext){
+        initProxy(pContext);
+    }
+
+    //region public void doRequest
+    public void doRequest(
+        IProxyDataProvider provider,
+#if($proxyClass.getGetReqClassName())
+        $proxyClass.getGetReqClassName() gInput,
+#end
+#if($proxyClass.getPostReqClassName())
+        $proxyClass.getPostReqClassName() pInput,
+#end
+        final IOnProxyDoneListener<$proxyClass.getResClassName()> onListener){
+
+        Promiser $q = $doRequest(provider,
+#if($proxyClass.getGetReqClassName())
+        gInput,
+#end
+#if($proxyClass.getPostReqClassName())
+        pInput,
+#end
+        onListener);
+        if($q != null)
+            $q.run();
+    }
+
+    //endregion
+
+
+    //region public void $doRequestForString
+    public Promiser $doRequestForString(
+        IProxyDataProvider provider,
+#if($proxyClass.getGetReqClassName())
+        $proxyClass.getGetReqClassName() gInput,
+#end
+#if($proxyClass.getPostReqClassName())
+        $proxyClass.getPostReqClassName() pInput,
+#end
+        final IOnProxyDoneForStringListener onListener){
+            String url = getApiURL();
+            ProviderContext pContext = getPContext();
+            pContext.setHost(url);
+
+            IHttpHelperListener l = new IHttpHelperListener() {
+
+                @Override
+                public boolean onSuccess(String result) {
+#*
+                    ResBody body = resovleJson(result,ResBody.class);
+                    boolean reBoolean = true;
+                    if(body == null){
+                        reBoolean = onListener.error(-1,SERVICE_ERROR_DATA,IOnProxyDoneListener.ERR_TYPE_SERVICE);
+                    }else if(checkServiceState(body.State)){
+                        onListener.success(result);
+                    }else{
+
+                        reBoolean = onListener.error(
+                            body.State,
+                            body.Message,
+                            IOnProxyDoneListener.ERR_TYPE_SERVICE);
+                    }
+*#
+                    onListener.success(result);
+                    onListener.done();
+                    return true;
+                }
+
+                @Override
+                public boolean onError(int stateCode, String message) {
+                    boolean exResolve = onListener.error(stateCode, message);
+                    onListener.done();
+                    return exResolve;
+                }
+
+            };
+
+            Promiser $q;
+            if(method.trim().toUpperCase().equals("GET")){
+                $q = provider.get(pContext,
+#if($proxyClass.getGetReqClassName())
+                                    gInput,
+#else
+                                    null,
+#end
+#if($proxyClass.getPostReqClassName())
+                                    pInput,
+#else
+                                    null,
+#end
+                                    l);
+            }else{
+                $q = provider.post(pContext,
+#if($proxyClass.getGetReqClassName())
+                                    gInput,
+#else
+                                    null,
+#end
+#if($proxyClass.getPostReqClassName())
+                                    pInput,
+#else
+                                    null,
+#end
+                                    l);
+            }
+
+            onListener.setPromiser($q);
+            return $q;
+
+        }
+
+        //endregion
+
+        //region public Promiser $doRequest
+        public Promiser $doRequest(
+            IProxyDataProvider provider,
+#if($proxyClass.getGetReqClassName())
+            $proxyClass.getGetReqClassName() gInput,
+#end
+#if($proxyClass.getPostReqClassName())
+            $proxyClass.getPostReqClassName() pInput,
+#end
+            final IOnProxyDoneListener<$proxyClass.getResClassName()> onListener){
+
+            String url = getApiURL();
+            ProviderContext pContext = getPContext();
+            pContext.setHost(url);
+
+            IHttpHelperListener l = new IHttpHelperListener() {
+
+                @Override
+                public boolean onSuccess(String result) {
+#*
+                    ResBody body = resovleJson(result,ResBody.class);
+
+                    boolean reBoolean = true;
+                    if(body == null){
+                        reBoolean = onListener.error(-1,SERVICE_ERROR_DATA,IOnProxyDoneListener.ERR_TYPE_SERVICE);
+                    }else if(checkServiceState(body.State)){
+
+                        $proxyClass.getResClassName() output = resovleJson(result, ${proxyClass.getResClassName()}.class);
+                        onListener.success(output);
+                    }else{
+                        reBoolean = onListener.error(body.State,body.Message,IOnProxyDoneListener.ERR_TYPE_SERVICE);
+                    }
+*#
+                    $proxyClass.getResClassName() output = resovleJson(result, ${proxyClass.getResClassName()}.class);
+                    onListener.success(output);
+                    onListener.done();
+                    return true;
+                }
+
+                @Override
+                public boolean onError(int stateCode, String message) {
+                    boolean exResolve = onListener.error(stateCode, message);
+                    onListener.done();
+                    return exResolve;
+                }
+            };
+
+
+            Promiser $q;
+            if(method.trim().toUpperCase().equals("GET")){
+                $q = provider.get(pContext,
+#if($proxyClass.getGetReqClassName())
+                                    gInput,
+#else
+                                    null,
+#end
+#if($proxyClass.getPostReqClassName())
+                                    pInput,
+#else
+                                    null,
+#end
+                                    l);
+            }else{
+                $q = provider.post(pContext,
+#if($proxyClass.getGetReqClassName())
+                                  gInput,
+#else
+                                  null,
+#end
+#if($proxyClass.getPostReqClassName())
+                                  pInput,
+#else
+                                  null,
+#end
+                                  l);
+            }
+
+            onListener.setPromiser($q);
+            return $q;
+
+        }
+
+        //endregion
+
+        //region public String getApiURL
+        public String getApiURL(){
+            return getHost() + apiUrl;
+        }
+        //endregion
+}

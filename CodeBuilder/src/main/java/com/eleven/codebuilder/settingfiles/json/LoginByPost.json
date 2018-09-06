@@ -1,0 +1,12 @@
+{
+	"apiPath":"api/v1/user/LoginByPost",
+	"controller":"user",
+	"method":"post",
+	"req":{
+		"UserId": "org.json.JSONObject"
+	},
+	"res":{
+		"State": 1,
+		"Message": ""
+	}
+}

@@ -1,0 +1,16 @@
+{
+  "apiPath": "api/Workflow/DoActionApp/{entryId}/{stepId}/{actionId}/{userId}",
+  "controller": "wfWebApi",
+  "method": "post",
+  "req": {
+    "BusiObjectType": "",
+    "ID": "",
+    "BusinessObject": "com.google.gson.JsonObject",
+    "BusiDefineObject": "com.google.gson.JsonObject",
+    "Options": ""
+  },
+  "res": {
+    "State": 0,
+    "Message": ""
+  }
+}

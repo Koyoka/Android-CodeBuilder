@@ -1,0 +1,11 @@
+{
+  "apiPath": "api/v1/sys/pbs/application/code/{sAppCode}",
+  "controller": "wfWebApi",
+  "method": "get",
+  "req": null,
+  "res": {
+    "Content": "",
+    "State": 0,
+    "Message": ""
+  }
+}

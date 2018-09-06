@@ -1,0 +1,9 @@
+kkk
+$name
+$value
+${classInfo}
+#if($classInfo.getClassName())
+classInfo not null
+#else
+clasInfo is Null
+#end

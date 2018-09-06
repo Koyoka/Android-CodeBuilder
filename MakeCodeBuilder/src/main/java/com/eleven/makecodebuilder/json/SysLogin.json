@@ -1,0 +1,33 @@
+{
+  "apiPath": "api/v1/user/1/Sys/Login/{sUserID}/{sPassword}",
+  "controller": "user",
+  "method": "get",
+  "req":{
+	"name":"",
+	"age":1,
+	"Obj":{
+		"filed":"",
+		"Id":1
+	}
+  },
+  "res": {
+    "Content": {
+      "UserID": "",
+      "UserName": "",
+      "UserPicture": "",
+      "RefreshToken": "",
+      "AccessToken": "",
+      "ChannelID": "",
+      "RoleType": 1,
+      "UserData": "",
+      "CurrentAppID": "",
+      "CurrentAppUrl": "",
+      "State": 1,
+      "Message": "",
+      "Timestamp": 1
+    },
+    "StatusCode": 1,
+    "State": 1,
+    "Message": ""
+  }
+}
