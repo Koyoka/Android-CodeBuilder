@@ -23,3 +23,12 @@ compile 'com.eleven.devlib:CodeBuilder:1.0.0'
 
     }
 ```
+
+`bat`: 
+```gradle
+set ns=com.eleven.httpvolleypromiser.proxy
+set savePath=C:\ElevenWorkSpace\proxy\
+set jsonFileDir=C:\ElevenWorkSpace\apiJson\
+java -jar CodeBuilder.jar %ns% %savePath% %jsonFileDir%
+pause
+```
