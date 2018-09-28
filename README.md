@@ -2,9 +2,9 @@
 
 `build.gradle`:  
 ```gradle
-maven{ url 'https://elevengroup.bintray.com/ElevenPublicRepository'}
+maven{ url 'https://jitpack.io'}
        
-compile 'com.eleven.devlib:CodeBuilder:1.0.0'
+compile 'com.github.Koyoka:Android-CodeBuilder:1.0.0'
 ```
 
 ```java
