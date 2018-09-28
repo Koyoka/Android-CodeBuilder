@@ -4,7 +4,7 @@
 ```gradle
 maven{ url 'https://jitpack.io'}
        
-compile 'com.github.Koyoka:Android-CodeBuilder:1.0.0'
+compile 'com.github.Koyoka:Android-CodeBuilder:1.0.1'
 ```
 
 ```java
