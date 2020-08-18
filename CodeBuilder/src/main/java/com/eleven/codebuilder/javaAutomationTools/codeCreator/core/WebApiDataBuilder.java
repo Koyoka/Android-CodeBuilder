@@ -231,7 +231,7 @@ public class WebApiDataBuilder {
 
             //region create code script
 //            IScriptTemplate proxyTemp =  proxyTemplate;
-//            String scirpt = proxyTemp.getProxyScript(//"com.wuhanins.core",
+//            String scirpt = proxyTemp.getProxyScript(
 //                    mPkgs,
 //                    apiUrl,
 //                    method,
