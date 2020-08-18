@@ -20,8 +20,8 @@ appendLine(sb,"import java.util.Date;");
 line(sb);
 appendLine(sb,"import com.j256.ormlite.table.DatabaseTable;");
 appendLine(sb,"import com.j256.ormlite.field.DatabaseField;");
-appendLine(sb,"import com.wuhanins.base.InsBaseModel;");
-//appendLine(sb,"import com.wuhanins.tgcmapp.base.BaseModel;");
+appendLine(sb,"import com.xxxx.base.InsBaseModel;");
+
 line(sb);
 appendLine(sb,clsStruct.getClassAttriStr());
 appendLine(sb,"public class " + (clsStruct.getClassName()) + "  extends InsBaseModel{");
