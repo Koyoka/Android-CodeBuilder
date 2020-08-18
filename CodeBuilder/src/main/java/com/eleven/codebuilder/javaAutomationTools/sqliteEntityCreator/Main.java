@@ -18,13 +18,7 @@ public class Main {
 //		foo1();
 	}
 	
-//	private static void foo1(){
-//		String dbPath = "C:\\ElevenWorkSpace\\tool\\SqliteDev\\Sample\\demo.db";
-//		String savePath = "C:\\ElevenWorkSpace\\company\\ins\\svn\\Android\\Projects\\ASproject\\CESproject\\TGCMAPP\\app\\src\\main\\java\\com\\wuhanins\\tgcmapp\\domainService\\model\\";
-//		String ns = "com.wuhanins.tgcmapp.domainService.model";
-//		SqliteResolveBuilder.getInstance().builder(dbPath,savePath,ns);
-//
-//	}
+//	
 	
 	private static void foo(){
 		
