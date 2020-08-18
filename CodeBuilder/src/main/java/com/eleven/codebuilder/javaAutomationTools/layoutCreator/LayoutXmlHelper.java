@@ -44,7 +44,7 @@ public class LayoutXmlHelper {
             String savePath,
             String layoutPath,
             String[] layoutNames) throws SAXException, IOException{
-        domain("com.xxxxx.tgcmapp.base.INSLayout", ns, rid,
+        domain("com.xxxxx.yyyy.base.INSLayout", ns, rid,
                  savePath,
                  layoutPath,
                  layoutNames);
